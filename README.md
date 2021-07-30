@@ -6,8 +6,10 @@ be played with the computer on a browser.
 
 
 Implemented the basic JS functions
+
 (also quickfix to make the markdown more readable)
+
 TODO
-[ ] Make UI in HTML/CSS
-[ ] Link the markup with JS
+- [ ] Make UI in HTML/CSS
+- [ ] Link the markup with JS
 
