@@ -50,23 +50,24 @@ function playRound(playerSelection, computerSelection) {
 }
 
 let playerScore = computerScore = 0;
-function onegame(e, playerChoice) {
+const playedWhat = document.querySelector('h3');
+function onegame(playerChoice) {
     //let playerChoice = prompt("rock/ paper/ scissors?");
-    
-    result = playRound(playerChoice, computerPlay());
+    let computerChoice = computerPlay();
+    result = playRound(playerChoice, computerChoice);
 
     if(result === "computer win"){
         computerScore += 1;
     }else if(result === "player win"){
         playerScore += 1;
     }
-    console.log(result);
+    playedWhat.textContent = `Player played:${playerChoice} and Computer: ${computerChoice}`;
     return result;
 
 }
 
 function uiplay(e){
-    let res = onegame(e.target.id, computerPlay());
+    let res = onegame(e.target.id);
     let scores = `Computer: ${computerScore} and Player: ${playerScore}`;
     const main_res = document.querySelector('#display h1');
     const round_res = document.querySelector('#display h2');
